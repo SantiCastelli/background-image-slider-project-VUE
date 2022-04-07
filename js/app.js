@@ -16,12 +16,17 @@
     methods: {
         imageLeft(){
           
-        this.index > 0 ? this.index-- : this.index; 
+          if (this.index > 0){
+            this.index--
+          }
+          else {
+            return this.index = 4
+          } 
         console.log("izquieda " + this.index);
         },
         imageRight(){
 
-        if (this.index < pictures.length){
+        if (this.index < pictures.length - 1){
           this.index++
         }
         else {
